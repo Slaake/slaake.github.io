@@ -8,41 +8,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="layout">
+  <div class="page">
     <aside class="sidebar">
-      <img class="sidebar-avatar" src="./profile.jpg" alt="Shirl Lakeway" width="120" height="120" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shirl+Lakeway&size=120&background=15803d&color=fff&bold=true&font-size=0.48';" />
-      <h1 class="sidebar-name">Shirl Lakeway</h1>
-      <p class="sidebar-title">IT Professional</p>
-      <p class="sidebar-org">Apple Federal Credit Union</p>
-      <p class="sidebar-location">Reston, Virginia</p>
-      <nav class="sidebar-nav" aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#honors">Honors</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="https://www.linkedin.com/in/shirllakeway/" class="sidebar-cta" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      <div class="sidebar-inner">
+        <img class="sidebar-avatar" src="profile.jpg" alt="Shirl Lakeway" width="140" height="140" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shirl+Lakeway&size=140&background=15803d&color=fff&bold=true&font-size=0.48';" />
+        <h1 class="sidebar-name">Shirl Lakeway</h1>
+        <p class="sidebar-title">IT Professional</p>
+        <p class="sidebar-org">Apple Federal Credit Union</p>
+        <p class="sidebar-location">Reston, Virginia</p>
+        <nav class="sidebar-nav" aria-label="Main">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#honors">Honors</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="https://www.linkedin.com/in/shirllakeway/" class="sidebar-cta" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
     </aside>
 
-    <main class="content">
-      <section id="about" class="block">
-        <h2 class="block-title">About</h2>
+    <main class="main">
+      <section id="about" class="section">
+        <h2 class="section-heading">About</h2>
         <p class="about-lead">I've always believed that growth comes from curiosity—and in IT, that mindset is essential.</p>
         <p class="about-body">I focus on delivering strong results and building reliable systems while staying curious about what's next.</p>
       </section>
 
-      <section id="experience" class="block">
-        <h2 class="block-title">Experience</h2>
+      <section id="experience" class="section">
+        <h2 class="section-heading">Experience</h2>
         <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Systems Engineer III</h3>
+          <article class="timeline-entry">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Systems Engineer III</h3>
               <p class="timeline-meta">Apple Federal Credit Union · Fairfax, Virginia · Jun 2024 – Present</p>
               <ul class="timeline-list">
                 <li>Champion and subject matter expert for Windows Server, Microsoft 365, Endpoint Management, and Work Management</li>
@@ -54,10 +56,10 @@
               </ul>
             </div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Systems Engineer II</h3>
+          <article class="timeline-entry">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Systems Engineer II</h3>
               <p class="timeline-meta">Apple Federal Credit Union · Fairfax, Virginia · Aug 2021 – Jun 2024</p>
               <ul class="timeline-list">
                 <li>Deployed and supported Citrix virtual desktop infrastructure</li>
@@ -66,10 +68,10 @@
               </ul>
             </div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Service Desk Engineer III</h3>
+          <article class="timeline-entry">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Service Desk Engineer III</h3>
               <p class="timeline-meta">Apple Federal Credit Union · Fairfax, Virginia · Oct 2020 – Aug 2021</p>
               <ul class="timeline-list">
                 <li>Provided Tier 3 escalation for service desk operations</li>
@@ -78,10 +80,10 @@
               </ul>
             </div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Senior Service Desk Engineer</h3>
+          <article class="timeline-entry">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Senior Service Desk Engineer</h3>
               <p class="timeline-meta">Cvent · Before Oct 2020</p>
               <p class="timeline-desc">Service desk and IT support experience prior to joining Apple Federal Credit Union.</p>
             </div>
@@ -89,43 +91,43 @@
         </div>
       </section>
 
-      <section id="education" class="block">
-        <h2 class="block-title">Education</h2>
-        <div class="edu-card">
-          <h3>Southern New Hampshire University</h3>
-          <p class="edu-meta">2009 – 2013</p>
+      <section id="education" class="section">
+        <h2 class="section-heading">Education</h2>
+        <div class="card">
+          <h3 class="card-title">Southern New Hampshire University</h3>
+          <p class="card-meta">2009 – 2013</p>
         </div>
       </section>
 
-      <section id="certifications" class="block">
-        <h2 class="block-title">Certifications</h2>
-        <div class="cert-list">
-          <span class="cert-pill">Microsoft 365 Endpoint Administrator Associate</span>
-          <span class="cert-pill">Atlassian Jira Administrator (Cloud)</span>
-          <span class="cert-pill">Microsoft Azure Fundamentals (AZ-900)</span>
-          <span class="cert-pill">MTA: Cloud Fundamentals</span>
-          <span class="cert-pill">Intel Retail Certified Professional</span>
+      <section id="certifications" class="section">
+        <h2 class="section-heading">Certifications</h2>
+        <div class="pills">
+          <span class="pill">Microsoft 365 Endpoint Administrator Associate</span>
+          <span class="pill">Atlassian Jira Administrator (Cloud)</span>
+          <span class="pill">Microsoft Azure Fundamentals (AZ-900)</span>
+          <span class="pill">MTA: Cloud Fundamentals</span>
+          <span class="pill">Intel Retail Certified Professional</span>
         </div>
       </section>
 
-      <section id="honors" class="block">
-        <h2 class="block-title">Honors &amp; Awards</h2>
-        <div class="honor-card honor-card-featured">
-          <p class="honor-label">Award</p>
-          <h3>Most Valuable Player</h3>
-          <p class="honor-meta">Microsoft · January 2017</p>
-          <p class="honor-desc">Awarded for achieving the highest sales and highest customer net promoter score during fiscal quarter 1 of 2017.</p>
+      <section id="honors" class="section">
+        <h2 class="section-heading">Honors &amp; Awards</h2>
+        <div class="card card-featured">
+          <span class="card-tag">Award</span>
+          <h3 class="card-title">Most Valuable Player</h3>
+          <p class="card-meta">Microsoft · January 2017</p>
+          <p class="card-text">Awarded for achieving the highest sales and highest customer net promoter score during fiscal quarter 1 of 2017.</p>
         </div>
-        <div class="honor-card">
-          <p class="honor-label">Leadership</p>
-          <h3>Phi Mu Alpha Sinfonia</h3>
-          <p class="honor-meta">President and Secretary · Sep 2010 – May 2013</p>
-          <p class="honor-desc">Manly Musicians and Musicianly Men—development of fraternal spirit, mutual welfare, and the advancement of music in America.</p>
+        <div class="card">
+          <span class="card-tag">Leadership</span>
+          <h3 class="card-title">Phi Mu Alpha Sinfonia</h3>
+          <p class="card-meta">President and Secretary · Sep 2010 – May 2013</p>
+          <p class="card-text">Manly Musicians and Musicianly Men—development of fraternal spirit, mutual welfare, and the advancement of music in America.</p>
         </div>
       </section>
 
-      <section id="contact" class="block block-contact">
-        <h2 class="block-title">Connect</h2>
+      <section id="contact" class="section section-contact">
+        <h2 class="section-heading">Connect</h2>
         <p class="contact-text">Let's connect on LinkedIn.</p>
         <a href="https://www.linkedin.com/in/shirllakeway/" class="btn" target="_blank" rel="noopener noreferrer">View profile</a>
       </section>
