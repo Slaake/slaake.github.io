@@ -101,8 +101,48 @@ main {
 
 /* Hero */
 .hero {
+  position: relative;
   text-align: center;
   padding: 4rem 0 5rem;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 14, 20, 0.75) 0%, var(--bg) 100%);
+  z-index: 1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-avatar {
+  display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
 }
 
 .hero-label {
@@ -177,6 +217,9 @@ main {
 }
 
 .section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 600;
@@ -185,13 +228,45 @@ main {
   letter-spacing: -0.02em;
 }
 
+.section-icon {
+  display: inline-flex;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.section-icon svg {
+  flex-shrink: 0;
+}
+
 /* About */
 .about-block {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.75rem 1.75rem;
+  padding: 0;
   max-width: 56ch;
+  overflow: hidden;
+}
+
+.about-visual {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.about-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.about-block .about-text {
+  padding: 1.75rem 1.75rem;
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 .about-text {
@@ -259,6 +334,22 @@ main {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.role-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.role-list li {
+  margin-bottom: 0.4rem;
+}
+
+.role-list li:last-child {
+  margin-bottom: 0;
 }
 
 .card-highlight {
@@ -388,7 +479,25 @@ main {
 }
 
 .site-footer p {
-  margin: 0;
+  margin: 0 0 0.5rem;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-credit {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.footer-credit a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-credit a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
@@ -408,6 +517,12 @@ main {
     padding: 2.5rem 0 3.5rem;
   }
 
+  .hero-avatar {
+    width: 112px;
+    height: 112px;
+    margin-bottom: 1rem;
+  }
+
   .hero-line {
     margin-top: 1.75rem;
   }
@@ -416,8 +531,12 @@ main {
     padding: 2rem 0;
   }
 
-  .about-block {
+  .about-block .about-text {
     padding: 1.35rem 1.25rem;
+  }
+
+  .about-visual {
+    height: 140px;
   }
 
   .cert-grid {
