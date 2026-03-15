@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page not found | Shirl Lakeway</title>
-  <meta http-equiv="refresh" content="0;url=./" />
-  <script>window.location.replace("./");</script>
+  <title>404 | Shirl Lakeway</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .error-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+    .error-code { font-family: 'Instrument Serif', Georgia, serif; font-size: 6rem; line-height: 1; color: var(--accent, #15803d); margin: 0 0 0.5rem; }
+    .error-title { font-size: 1.25rem; font-weight: 600; color: var(--text, #1c1917); margin: 0 0 0.5rem; }
+    .error-text { font-size: 1rem; color: var(--text-muted, #57534e); margin: 0 0 1.5rem; max-width: 28ch; }
+    .error-page .btn { margin-top: 0.5rem; }
+  </style>
 </head>
 <body>
-  <p><a href="./">Go to profile</a></p>
+  <div class="error-page">
+    <p class="error-code">404</p>
+    <h1 class="error-title">Page not found</h1>
+    <p class="error-text">This link is in the cloud. Or the recycle bin. We’re not sure—we’re in IT, not archaeology.</p>
+    <a href="./" class="btn">Take me home</a>
+  </div>
 </body>
 </html>
