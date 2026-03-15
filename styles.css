@@ -55,6 +55,13 @@ body {
 @media (min-width: 900px) {
   .page {
     grid-template-columns: 300px 1fr;
+    grid-template-areas: "sidebar main";
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .main {
+    grid-area: main;
   }
 }
 
@@ -74,11 +81,21 @@ body {
   .sidebar {
     position: sticky;
     top: 0;
+    align-self: start;
     height: 100vh;
+    max-height: 100vh;
     border-bottom: none;
     border-right: 1px solid var(--border-sidebar);
     padding: 2.5rem 1.75rem;
+    z-index: 2;
+    overflow-y: auto;
   }
+}
+
+/* Main content - stays in its column, below sidebar in stack order */
+.main {
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-inner {
