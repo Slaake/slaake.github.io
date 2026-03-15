@@ -7,12 +7,14 @@
   <meta name="description" content="Shirl Lakeway - IT professional at Apple Federal Credit Union. Reston, VA. Microsoft & Atlassian certified." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="page-bg" aria-hidden="true"></div>
+
   <header class="site-header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Main">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
@@ -24,67 +26,117 @@
 
   <main>
     <section class="hero">
+      <p class="hero-label">Profile</p>
       <h1 class="hero-name">Shirl Lakeway</h1>
       <p class="hero-title">IT Professional</p>
       <p class="hero-org">Apple Federal Credit Union</p>
-      <p class="hero-location">Reston, Virginia</p>
+      <p class="hero-location">
+        <span class="pin" aria-hidden="true">📍</span> Reston, Virginia
+      </p>
+      <div class="hero-line" aria-hidden="true"></div>
     </section>
 
     <section id="about" class="section">
-      <h2>About</h2>
-      <p class="about-text">I've always believed that growth comes from curiosity—and in IT, that mindset is essential. I focus on delivering strong results and building reliable systems while staying curious about what's next.</p>
+      <span class="section-num">01</span>
+      <h2 class="section-title">About</h2>
+      <div class="about-block">
+        <p class="about-text">I've always believed that growth comes from curiosity—and in IT, that mindset is essential. I focus on delivering strong results and building reliable systems while staying curious about what's next.</p>
+      </div>
     </section>
 
     <section id="experience" class="section">
-      <h2>Experience</h2>
-      <div class="card">
-        <h3>Apple Federal Credit Union</h3>
-        <p class="card-meta">Fairfax, Virginia</p>
-        <p>IT experience supporting service desk operations and technology initiatives.</p>
+      <span class="section-num">02</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="card card-exp">
+        <div class="card-accent"></div>
+        <div class="card-inner">
+          <h3>Apple Federal Credit Union</h3>
+          <p class="card-meta">Fairfax, Virginia</p>
+          <p class="card-desc">IT experience supporting service desk operations and technology initiatives.</p>
+        </div>
       </div>
     </section>
 
     <section id="education" class="section">
-      <h2>Education</h2>
-      <div class="card">
-        <h3>Southern New Hampshire University</h3>
-        <p class="card-meta">2009 – 2013</p>
+      <span class="section-num">03</span>
+      <h2 class="section-title">Education</h2>
+      <div class="card card-edu">
+        <div class="card-accent"></div>
+        <div class="card-inner">
+          <h3>Southern New Hampshire University</h3>
+          <p class="card-meta">2009 – 2013</p>
+        </div>
       </div>
     </section>
 
     <section id="certifications" class="section">
-      <h2>Certifications</h2>
-      <ul class="cert-list">
-        <li><strong>Microsoft 365 Certified: Endpoint Administrator Associate</strong> — Microsoft (Dec 2024)</li>
-        <li><strong>Atlassian Certified Jira Administrator for Cloud</strong> — Atlassian (May 2024, ACP-120)</li>
-        <li><strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> — Microsoft (Feb 2019)</li>
-        <li><strong>MTA: Cloud Fundamentals</strong> — Microsoft (Oct 2018)</li>
-        <li><strong>Intel Retail Certified Professional</strong> — Intel Corporation (Aug 2016)</li>
-      </ul>
+      <span class="section-num">04</span>
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <span class="cert-badge">Microsoft</span>
+          <h4>Endpoint Administrator Associate</h4>
+          <p class="cert-meta">M365 · Dec 2024</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-badge">Atlassian</span>
+          <h4>Jira Administrator for Cloud</h4>
+          <p class="cert-meta">ACP-120 · May 2024</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-badge">Microsoft</span>
+          <h4>Azure Fundamentals (AZ-900)</h4>
+          <p class="cert-meta">Feb 2019</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-badge">Microsoft</span>
+          <h4>MTA: Cloud Fundamentals</h4>
+          <p class="cert-meta">Oct 2018</p>
+        </div>
+        <div class="cert-card">
+          <span class="cert-badge">Intel</span>
+          <h4>Retail Certified Professional</h4>
+          <p class="cert-meta">Aug 2016</p>
+        </div>
+      </div>
     </section>
 
     <section id="honors" class="section">
-      <h2>Honors &amp; Awards</h2>
-      <div class="card highlight">
-        <h3>Most Valuable Player Award</h3>
-        <p class="card-meta">Microsoft · January 2017</p>
-        <p>Awarded for achieving the highest sales and highest customer net promoter score during fiscal quarter 1 of 2017.</p>
+      <span class="section-num">05</span>
+      <h2 class="section-title">Honors &amp; Awards</h2>
+      <div class="card card-highlight">
+        <div class="card-accent card-accent-gold"></div>
+        <div class="card-inner">
+          <span class="honor-badge">Award</span>
+          <h3>Most Valuable Player</h3>
+          <p class="card-meta">Microsoft · January 2017</p>
+          <p class="card-desc">Awarded for achieving the highest sales and highest customer net promoter score during fiscal quarter 1 of 2017.</p>
+        </div>
       </div>
       <div class="card">
-        <h3>Phi Mu Alpha Sinfonia</h3>
-        <p class="card-meta">President and Secretary · Sep 2010 – May 2013</p>
-        <p>Manly Musicians and Musicianly Men—development of fraternal spirit, mutual welfare, and the advancement of music in America.</p>
+        <div class="card-accent"></div>
+        <div class="card-inner">
+          <span class="honor-badge">Leadership</span>
+          <h3>Phi Mu Alpha Sinfonia</h3>
+          <p class="card-meta">President and Secretary · Sep 2010 – May 2013</p>
+          <p class="card-desc">Manly Musicians and Musicianly Men—development of fraternal spirit, mutual welfare, and the advancement of music in America.</p>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section contact-section">
-      <h2>Connect</h2>
-      <p>Let's connect on LinkedIn.</p>
-      <a href="https://www.linkedin.com/in/shirllakeway/" class="btn" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+      <span class="section-num">06</span>
+      <h2 class="section-title">Connect</h2>
+      <p class="contact-text">Let's connect on LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/shirllakeway/" class="btn" target="_blank" rel="noopener noreferrer">
+        <span class="btn-text">View LinkedIn Profile</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
     </section>
   </main>
 
   <footer class="site-footer">
+    <div class="footer-line"></div>
     <p>&copy; <span id="year"></span> Shirl Lakeway</p>
   </footer>
 
